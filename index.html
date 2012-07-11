@@ -27,7 +27,7 @@
     <div class="wrapper">
       <header>
         <h1>RKrace-bookmarklet</h1>
-        <p>Bookmarklet used to edit a race map on Runkeeper by giving a gpx file.</p>
+        <p>Edit a race map on Runkeeper simply by droping a gpx file.</p>
 
         <p class="view"><a href="https://github.com/jacqueminv/rkrace-bookmarklet">View the Project on GitHub <small>jacqueminv/rkrace-bookmarklet</small></a></p>
 
@@ -35,11 +35,11 @@
       <section>
         <h3>Editing a race map, one click away</h3>
         
-        <p>Being a fan of Runkeeper since a while I was annoyed by their race map creation workflow. You have to provide the race map and this is possible only by manually setting points. This can take minutes if not hours for some races and it can be hard to be precise (e.g. trail races anybody?)</p>
+        <p>Being a fan of Runkeeper since a while I was annoyed by their race map creation workflow. You have to provide the race map and this is possible only by manually setting points. This can take minutes if not hours for some races and it can be hard to be precise (e.g. trail races anybody?).</p>
         
         <p>The little hacker deep inside me kept urging me to have a try fixing this. Here comes my bookmarklet.</p>
 
-        <p>Drag and drop the following link in your bookmarks. Next time you want to edit a race on Runkeeper, simply click this link and a small box asking you to provide a <code>gpx</code> file will appear. Drag and drop the race file and the process will start. This can take a while depending on your browser and resources as everything is done in the browser. Nothing is sent or tracked from this bookmarklet. The code is open feel free to check.</p>
+        <p>Drag and drop the following link in your bookmarks. Next time you want to edit a race on Runkeeper, simply click this bookmark and a small box asking you to provide a <code>gpx</code> file will appear. Drag and drop the race file and the process will start. This can take a while depending on your browser and available resources as everything is done in the browser. Nothing is sent or tracked from this bookmarklet. The code is open feel free to check.</p>
         
         <a id="bk" href="">
           rkrace-bookmarklet
@@ -51,6 +51,11 @@
           document.getElementById("bk").href = "javascript:(" + bk.valueOf() + "());";
         </script>
 
+<h3>Testimonials</h3>
+
+<ul>
+  <li>Amazing! Works like a sharm! &mdash; <a href="http://support.runkeeper.com/discussions/questions/2878-create-new-race-map-from-activityroute#comment_17209020">Bjonar</a></li>
+</ul>
 
 <h3>Support or Contact</h3>
 
