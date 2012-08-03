@@ -19,7 +19,6 @@ javascript:(function() {
         };
 
     if (!(ddsupported && objectURLSupported && blobBuilderSupported && workerSupported && fileReaderSupported)) {
-        console.info(ddsupported, objectURLSupported, blobBuilderSupported, workerSupported, fileReaderSupported);
         hideDropZone("You need a more recent browser");
         return;
     }
