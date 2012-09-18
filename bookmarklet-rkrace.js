@@ -91,7 +91,7 @@ function handleFileSelect(evt) {
 
         if ( points && points.length && points.length > 0 ) {
             mapController.renderActivityPoints(points);
-            $("#changesMade").val(true);
+            $("input[name=mapEdited]").val(true);
             hideDropZone("Race map successfully edited.");
         } else {
             hideDropZone("No point found in your gpx file. Race map not edited.");
