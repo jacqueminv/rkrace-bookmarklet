@@ -15,11 +15,17 @@ javascript:(function(undefined) {
     var div = document.createElement('div'),
         ddsupported = ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div),
         URL = window.URL || window.webkitURL,
-        BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder,
+        BlobBuilder,
         hideDropZone = function(msg){
             dropZone.innerHTML = msg || "";
             setTimeout(function(){dropZone.parentElement.removeChild(dropZone);}, 2000);
         };
+        
+    try {
+        BlobBuilder = !!new Blob();
+    } catch ( e ) { 
+        BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder; 
+    }
 
     if (!(ddsupported && URL && BlobBuilder && Worker && FileReader)) {
         hideDropZone("You need a more recent browser");
