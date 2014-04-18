@@ -20,11 +20,11 @@ javascript:(function(undefined) {
             dropZone.innerHTML = msg || "";
             setTimeout(function(){dropZone.parentElement.removeChild(dropZone);}, 2000);
         };
-        
+
     try {
         BlobBuilder = !!new Blob();
-    } catch ( e ) { 
-        BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder; 
+    } catch ( e ) {
+        BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
     }
 
     if (!(ddsupported && URL && BlobBuilder && Worker && FileReader)) {
@@ -95,8 +95,10 @@ function handleFileSelect(evt) {
             var points = e.data;
 
             if ( points && points.length && points.length > 0 ) {
-                mapController.renderActivityPoints(points);
-                $("input[name=mapEdited]").val(true);
+                mapController.mapSetup({
+                    "editMode": true,
+                    "points": points
+                });
                 hideDropZone("Map successfully edited.");
             } else {
                 hideDropZone("No point found in your gpx file. Map not edited.");
