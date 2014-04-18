@@ -37,11 +37,6 @@ javascript:(function(undefined) {
         return;
     }
 
-    if ( !mapController.model.editable ) {
-        hideDropZone("You must edit the race before proceeding.");
-        return;
-    }
-
 function handleFileSelect(evt) {
     evt.stopPropagation();
     evt.preventDefault();
