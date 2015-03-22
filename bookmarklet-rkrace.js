@@ -72,7 +72,7 @@ javascript:(function (undefined) {
             var Tracks = function () { GpxFormat.apply(this, Array.prototype.slice.call(arguments, 0)); };
             Tracks.prototype = new GpxFormat();
             Tracks.prototype.supports = function () {
-                return this.xml.getRootElement() && this.xml.getRootElement().getChildElement("rte");
+                return this.xml.getRootElement() && this.xml.getRootElement().getChildElements("rte");
             };
             Tracks.prototype.handle = function () {
                 var rte, iRte = 0, rte, rtes, rtept, iRtept = 0,
@@ -93,7 +93,7 @@ javascript:(function (undefined) {
             var Routes = function () { GpxFormat.apply(this, Array.prototype.slice.call(arguments, 0)); };
             Routes.prototype = new GpxFormat();
             Routes.prototype.supports = function () {
-                return this.xml.getRootElement() && this.xml.getRootElement().getChildElement("trk");
+                return this.xml.getRootElement() && this.xml.getRootElement().getChildElements("trk");
             };
             Routes.prototype.handle = function () {
                 var trkpt, trk, iTrk = 0, lTrk, trks, trkseg, trksegs, iTrkseg = 0,
